@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="https://img.picui.cn/free/2024/10/20/6714709f0df2d.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://img.picui.cn/free/2024/10/08/67052d608221c.png" type="image/png">
+    <title>小工具</title>
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -406,7 +407,7 @@
         }
 
         .theme-default .mode-selector {
-            background-color: #fef9c3;  /* 左侧工具栏背景色 */
+            background-color: #fdf1ae;  /* 左侧工具栏背景色 */
         }
 
         .theme-default .content-area {
@@ -590,7 +591,7 @@
             align-items: center;
             z-index: 9999;
             opacity: 1;
-            transition: opacity 1s ease-out, visibility 2s ease-out;
+            transition: opacity 1s ease-out, visibility 1s ease-out;
             visibility: visible;
         }
 
@@ -616,8 +617,8 @@
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div id="root"></div>
 
-    <div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; display: flex; justify-content: center; align-items: center; z-index: 9999; opacity: 1; transition: opacity 2s ease-out, visibility 2s ease-out; visibility: visible;">
-        <img src="https://img.picui.cn/free/2024/10/08/67052d608221c.png" alt="加载中" style="animation: rotate-pause 1.6s linear infinite;">
+    <div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; display: flex; justify-content: center; align-items: center; z-index: 9999; opacity: 1; transition: opacity 1s ease-out, visibility 1s ease-out; visibility: visible;">
+        <img src="https://img.picui.cn/free/2024/10/20/6714709f0df2d.png" alt="加载中" style="animation: rotate-pause 1.6s linear infinite;">
     </div>
 
     <script>
@@ -2228,10 +2229,10 @@
                     let animationFrameId;
 
                     const dinoImg = new Image();
-                    dinoImg.src = 'https://svgur.com/i/11Aq.svg';
+                    dinoImg.src = 'https://img.picui.cn/free/2024/10/20/6714579d76ca1.png';
 
                     const cactusImg = new Image();
-                    cactusImg.src = 'https://svgur.com/i/11Ar.svg';
+                    cactusImg.src = 'https://img.picui.cn/free/2024/10/20/671458235cc3b.png';
 
                     let dinoY = canvas.height - 60;
                     let dinoJumping = false;
@@ -2242,7 +2243,7 @@
                     const jump = () => {
                         if (!dinoJumping) {
                             dinoJumping = true;
-                            dinoDy = -15;
+                            dinoDy = -17;
                         }
                     };
 
@@ -2319,12 +2320,12 @@
                         />
                         {gameOver && (
                             <div className="mt-4">
-                                <p className="text-xl font-bold mb-2">游戏结束</p>
+                                
                                 <button
                                     onClick={restartGame}
                                     className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
                                 >
-                                    重新开始
+                                    游戏结束，退出后再次进入重新开始。
                                 </button>
                             </div>
                         )}
